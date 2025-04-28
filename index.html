@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <title>Recetas</title>
+</head>
+
+<body>
+    <h1>Escribe tu receta</h1>
+    <section class="container_formulario">
+        <article class="form_name">
+            <label for="nombreReceta">Nombre de Receta</label>
+            <input type="text" id="nombreReceta" required>
+        </article>
+        <article class="form_ingredientes">
+            <article class="article_ingredientes">
+                <label for="ingrediente">Ingredientes</label>
+                <input type="text" id="ingrediente" required>
+            </article>
+            <article class="article_ingredientes">
+                <label for="numporciones">Número de porciones</label>
+                <input type="number" id="numporciones" required min="1">
+            </article>
+        </article>
+        <article class="form_instrucciones">
+            <label for="instrucciones">Instrucciones de preparación</label>
+            <textarea id="instrucciones" required rows="4"></textarea>
+        </article>
+        <article class="form_tiempo">
+            <label for="tiempo">Tiempo de preparación (minutos)</label>
+            <input type="number" id="tiempo" required min="1">
+        </article>
+
+        <article class="form_select">
+            <label for="categoria">Categoría (Desayuno, Almuerzo, Cena, Postre, etc.)</label>
+            <select id="categoria">
+                <option value="">Seleccione una categoría</option>
+                <option value="desayuno">Desayuno</option>
+                <option value="almuerzo">Almuerzo</option>
+                <option value="cena">Cena</option>
+                <option value="postre">Postre</option>
+                <option value="otro">Otro</option>
+            </select>
+        </article>
+        
+        <article class="form_select">
+            <label for="dificultad">Nivel de dificultad</label>
+            <select id="dificultad">
+                <option value="">Seleccione dificultad</option>
+                <option value="facil">Fácil</option>
+                <option value="medio">Medio</option>
+                <option value="dificil">Difícil</option>
+            </select>
+        </article>
+    </section>
+    <section class="botonguardar">
+        <button id="btnGuardarReceta" class="btn">Guardar Receta</button>
+    </section>
+    <section id="recetasguardadas" class="recetas_guardadas">
+        <h2>Recetas Guardadas</h2>
+        <div id="listaRecetas"></div>
+    </section>
+</body>
+
+</html>
