@@ -107,8 +107,8 @@ function cargarRecetasGuardadas() {
         card.innerHTML = `
             <div class="receta-header">
                 <h3>${receta.nombre}</h3>
-                <span class="receta-categoria">${receta.categoria}</span>
-                <span class="receta-dificultad">Dificultad: ${receta.dificultad}</span>
+                <span class="receta-categoria"><strong>Categoria:</strong><br>${receta.categoria}</span>
+                <span class="receta-dificultad"><strong>Dificultad:<br></strong>${receta.dificultad}</span>
             </div>
             <div class="receta-body">
                 <p><strong>Ingredientes:</strong> ${receta.ingrediente}</p>
